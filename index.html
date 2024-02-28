@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bangla Script</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery.bangla@1/dist/jquery.bangla.js"></script>
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1 class="title">&lt; বাংলা-স্ক্রিপ্ট/&gt;</h1>
+				<div>
+					<p class="description">
+						When the last thing the world needed was another programming
+						language, step aside traditional syntax and make way for the linguistic elegance of অ, আ, ক, and beyond. Embark on the journey of coding where "নতুন উচ্চারণে" takes on a whole new meaning!
+					</p>
+					<div class="social-icons">
+						<a href="">
+							<img src="github-logo.png" class="icon" alt="">
+							<p>Source Code</p>
+						</a>
+					</div>
+				</div>
+			</header>
+
+			<div class="box-container">
+				<div class="button-container">
+					<img src="reset.png" class="button" id="reset-btn" title="Reset Code" alt="Reset" />
+					<img src="play.png" class="button" id="run-btn" title="Run Code" alt="Run" />
+				</div>
+				<textarea
+					id="input-box"
+					class="input-box"
+					placeholder='লেখো("হ্যালো, পৃথিবী")'
+				></textarea>
+				<p id="runtime"></p>
+				<textarea id="output-box" class="output-box" placeholder="আউটপুট..." readonly></textarea>
+			</div class="box-container">
+			<footer><p>© 2024 Saikat Das</p></footer>
+		</div>
+	</body>
+</html>
