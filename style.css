@@ -11,7 +11,14 @@ body {
 	height: 100vh;
 	display: grid;
 	place-content: center;
-	background-image: linear-gradient(to right bottom, #6420aa, #931eac, #bc21ab, #df2ca9, #ff3ea5);
+	background-image: linear-gradient(
+		to right bottom,
+		#6420aa,
+		#931eac,
+		#bc21ab,
+		#df2ca9,
+		#ff3ea5
+	);
 	background-size: 100% 300vh;
 	background-repeat: repeat-y;
 	font-family: 'Poppins', sans-serif;
@@ -33,6 +40,19 @@ body {
 	font-weight: bolder;
 	text-align: center;
 	color: #fff;
+}
+
+.playground-title {
+	margin-top: 25px;
+	font-size: 17px;
+	color: white;
+	width: 100%;
+	text-align: left;
+}
+
+hr {
+	width: 100%;
+	margin: 10px 0 10px 0;
 }
 
 .description {
@@ -58,6 +78,7 @@ body {
 	border: none;
 	background-color: #282c34;
 	border-radius: 3px;
+	padding: 5px;
 }
 
 .button-container {
@@ -125,13 +146,64 @@ footer {
 	color: white;
 }
 
+.documentation-container {
+	width: 100%;
+	padding-top: 25px;
+	margin-top: 30px;
+}
+
+.doc-title {
+	color: white;
+	font-size: 17px;
+}
+
+.snippet-wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.box-wrapper {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.box-wrapper p {
+	color: white;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.box {
+	width: 100%;
+	color: white;
+	font-size: 10px;
+	padding: 10px;
+	background-color: #282c34;
+	border-radius: 3px;
+	position: relative;
+}
+
+.copy-icon {
+	position: absolute;
+	padding: 5px;
+	width: 25px;
+	top: 0;
+	right: 0;
+}
+
 @media only screen and (min-width: 500px) {
 	.description {
 		font-size: 15px;
 		padding: 40px;
 	}
 
-  footer {
+	footer {
 		margin-top: auto;
+	}
+
+	.snippet-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 5px;
 	}
 }

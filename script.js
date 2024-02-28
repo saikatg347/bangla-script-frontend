@@ -23,15 +23,20 @@ runBtn.addEventListener('click', async (event) => {
 	}
 
 	try {
-		const response = await fetch('https://bangla-script-api.vercel.app/submit', requestOptions)
+		const response = await fetch(
+			'https://bangla-script-api.vercel.app/submit',
+			requestOptions
+		)
 
 		const serverResponse = await response.json()
 
 		if (serverResponse.hasOwnProperty('output')) {
-      setOutput(serverResponse.output)
-      setRunTime(serverResponse.cpuTime)
+			setOutput(serverResponse.output)
+			setRunTime(serverResponse.cpuTime)
 		} else if (serverResponse.hasOwnProperty('error')) {
-      setOutput(serverResponse.error + '\nPlease check your code for syntax errors.')
+			setOutput(
+				serverResponse.error + '\nPlease check your code for syntax errors.'
+			)
 		} else {
 			setOutput('An error occurred. Please check your code for syntax errors.')
 		}
@@ -50,5 +55,20 @@ const setOutput = (output) => {
 }
 
 const setRunTime = (time) => {
-  runtime.innerText = "Executed in " +  time
+	runtime.innerText = 'Executed in ' + time
 }
+
+const copyIcons = document.querySelectorAll('.copy-icon')
+
+copyIcons[0].addEventListener('click', (e) => {
+	navigator.clipboard.writeText('লেখো("হ্যালো, পৃথিবী")')
+})
+copyIcons[1].addEventListener('click', (e) => {
+	navigator.clipboard.writeText('ধরি এক্স = ১০')
+})
+copyIcons[2].addEventListener('click', (e) => {
+	navigator.clipboard.writeText('যদি(৫ > ২){\n    লেখো("৫ দুইয়ের এর থেকে বড়")\n}\nনাহলে{\n    লেখো("২ পাঁচের থেকে বড়")\n}')
+})
+copyIcons[3].addEventListener('click', (e) => {
+	navigator.clipboard.writeText('ধরি এক্স = ১\nযতক্ষণ(এক্স <= ৫){\n    লেখো("হ্যালো ")\n    এক্স = এক্স + ১\n}')
+})
